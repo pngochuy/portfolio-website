@@ -1,0 +1,406 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* DEFAULT CSS REACT */
+body {
+  margin: 0;
+  /* font-family: "Rubik", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  /* (default) 14.4px = 0.9rem */
+  font-size: 0.9rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+input,
+textarea {
+  caret-color: red;
+}
+/* ------------- CSS variables & Generate CSS Styles ----------------- */
+:root {
+  --primary-hue: 270;
+  --black-lightness: 15%;
+  --dark-lightness: 44%;
+  --light-lightness: 94%;
+  --white-lightness: 100%;
+  --color-primary: hsl(var(--primary-hue), 89%, 41%);
+  --color-white: hsl(0, 5%, var(--white-lightness));
+  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
+  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
+  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+
+  /* GENERAL CONTAINER VARIABLES */
+  --container-width-lg: 76%; /* lg: large */
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  /* BORDER RADIUS VARIABLES */
+  --border-radius-1: 1.2rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 0.5rem;
+
+  /* GENERAL TRANSITION VARIABLE */
+  --transition: all 500ms ease;
+
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #93e1d8;
+  --color-primary-variant: #rgba(255, 255, 255, 0.4);
+  --color-white: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* smoothly scroll to the different sections that we have */
+}
+
+/* ::-webkit-scrollbar {
+  width: 5px;
+  border-left: 1px solid #e6ecf8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #141c3a;
+} */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* GENERAL CONTAINER CLASS */
+.container {
+  width: var(--container-width-lg);
+  margin-inline: auto;
+
+  max-width: 1920px;
+}
+
+/* GENERAL SECTION STYLES */
+section {
+  padding: 7rem 0;
+  background: var(--color-light);
+  transition: var(--transition);
+}
+
+section:nth-child(even) {
+  background: var(--color-white);
+}
+
+section > h2 {
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+  margin: 0.5rem auto 4rem;
+  width: 40%;
+}
+
+/* GENERAL LINK STYLES */
+a {
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+/* GENERAL HEADING STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+/* special for H2 */
+
+h2 {
+  width: fit-content;
+  padding-bottom: 0.3rem;
+  margin: 0.8rem 0;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  cursor: pointer;
+}
+h2:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* ------------------ */
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 0.95rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+/* GENERAL IMAGES STYLES */
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* GENERAL BUTTON STYLES */
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: var(--color-light);
+  color: var(--color-black);
+  padding: 0.6rem 2.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: var(--color-light);
+  transform: translateY(-0.5rem);
+}
+
+.btn.white {
+  background: var(--color-white);
+}
+
+.btn.white:hover {
+  background: var(--color-white);
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  color: white;
+  transition: var(--transition);
+}
+
+.btn.primary:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn.sm {
+  /* sm: smaller */
+  padding: 0.5rem 1.2rem;
+}
+
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+  /* Below 1024px devices (tablets) */
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  section > p {
+    width: 72%;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  /* Below 600px devices (phone) */
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+  }
+
+  section > p {
+    width: var(--container-width-md);
+  }
+}

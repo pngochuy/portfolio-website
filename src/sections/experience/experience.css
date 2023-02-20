@@ -1,0 +1,105 @@
+.experience__container {
+  display: grid;
+  grid-template-columns: 35% 53%;
+  gap: 12%;
+}
+
+.experience__title-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience__portrait img {
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.experience__portrait:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.experience__cards {
+  margin: 3rem 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* TRONG Card.js */
+.card.experience__card {
+  text-align: center;
+}
+
+.experience__card-icon {
+  font-size: 1.3rem;
+  color: var(--color-black);
+  border-radius: var(--border-radius-3);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.experience__card-github,
+.experience__card-contact {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.card.experience__card:hover .experience__card-icon {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card.experience__card h5 {
+  margin: 1rem 0;
+}
+
+.experience__right p {
+  margin-bottom: 0.8rem;
+}
+
+.experience__right .btn {
+  margin-top: 2.5rem;
+}
+.highlight-text {
+  color: transparent;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #c084fc;
+  --tw-gradient-to: #ec4899;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+  .experience__left {
+    display: none;
+  }
+
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
+
+  .experience__right h2 {
+    text-align: center;
+  }
+}
+
+/* MEDIA QUERIES (phones) */
+@media screen and (max-width: 600px) {
+  .experience__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience__right .btn {
+    margin-top: 2rem;
+  }
+}

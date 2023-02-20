@@ -1,0 +1,199 @@
+.contact__container {
+  width: 60%;
+  display: grid;
+  /* nếu ko muốn chia để theo đơn vị "fr" thì dùng % để thay thế,
+    nếu muốn dùng gap theo % thì (width tổng - width đã chia đôi tùy ý là ra)
+  */
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+.contact__title-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.contact__platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.contact__platform {
+  background-color: rgb(137, 137, 171);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.contact__platform:hover {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+.contact__platform-icon {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__platform .contact__platform-link {
+  margin-top: 0.6rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  /* background: #ffa69e; */
+  background-color: rgb(160, 182, 238);
+}
+
+/* ------------------------------------------------ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+  height: fit-content;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.4rem;
+  background: transparent;
+  resize: vertical;
+  color: var(--color-black);
+  overflow: auto;
+  font-family: "Montserrat", sans-serif;
+}
+textarea {
+  border: 3px solid #ccc;
+  transition: var(--transition);
+}
+textarea:focus,
+textarea:valid {
+  border: 3px solid var(--color-primary);
+}
+.button {
+  background-color: rgb(160, 182, 238);
+  width: fit-content;
+  display: flex; /* Because if the btn has text and icon, so we need flex */
+  align-items: center;
+  padding: 0.8rem 1.3rem;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+}
+
+.btn-custom {
+  width: 100%;
+  height: 100%;
+  color: var(--color-black);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: rgb(160, 182, 238);
+  padding: 0.5rem 1.3em;
+  transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+}
+.btn-custom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: var(--transition);
+}
+.button:hover .btn-custom::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-2);
+  transform: scale(1.2, 1.2);
+}
+
+.button:hover .btn-custom::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.input-data {
+  height: 3rem;
+  width: 100%;
+  position: relative;
+}
+.input-data input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  border-bottom: 2px solid #ccc;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  transform: translateY(-30px);
+  font-size: 15px;
+  bottom: 15px;
+}
+.input-data label {
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  color: #666;
+  transition: all 0.3s ease;
+}
+.input-data .underline {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+.input-data .underline::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline::before,
+.input-data input:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 1024px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+/* MEDIA QUERIES (tablets) */
+@media screen and (max-width: 600px) {
+  .contact__container {
+    width: var(--container-width-sm);
+  }
+}
