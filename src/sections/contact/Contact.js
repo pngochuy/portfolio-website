@@ -59,13 +59,13 @@ function Contact() {
         </div>
 
         <form action="" ref={form} onSubmit={sendEmail}>
-          <div className="input-data" name="name">
-            <input type="text" required />
+          <div className="input-data">
+            <input type="text" name="name" required />
             <div className="underline"></div>
             <label htmlFor="">Full Name</label>
           </div>
           <div className="input-data" name="email">
-            <input type="text" required />
+            <input type="text" name="email" required />
             <div className="underline"></div>
             <label htmlFor="">Email</label>
           </div>
