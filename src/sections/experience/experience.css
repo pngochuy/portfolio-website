@@ -1,11 +1,5 @@
 .experience__container {
   display: grid;
-  /* 
-    - 35%: left and 52%: right 
-    - giống flex nhưng làm thế này sẽ chia ra có width, flex ko có hay ko nữa =))
-
-    - gap: 12%; để để width experience đc full 100% (35% + 53% + 12%)
-  */
   grid-template-columns: 35% 53%;
   gap: 12%;
 }
@@ -30,18 +24,11 @@
 .experience__cards {
   margin: 3rem 0 1.5rem;
   display: grid;
-  /* repeat(number of columns/rows, the column width we want);
-  - grid-template-columns: 33.33% 33.33% 33.33%; --> sẽ bị dư hoặc overflow 
-  - cách này bằng repeat(3, calc(100% / 3))
-  - Nhưng nên viết như vậy: repeat(3, 1fr)
-  - https://css-tricks.com/introduction-fr-css-unit/
-  - https://css-tricks.com/almanac/properties/g/grid-template-columns/
-  */
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-/* TRONG Card.js */
+/* In Card.js */
 .card.experience__card {
   text-align: center;
 }
@@ -64,7 +51,6 @@
   font-weight: 800;
 }
 
-/* khi hover vào card thì tạo style cho icon thay vì style card */
 .card.experience__card:hover .experience__card-icon {
   background: var(--color-primary);
   color: var(--color-white);
@@ -95,7 +81,6 @@
 /* MEDIA QUERIES (tablets) */
 @media screen and (max-width: 1024px) {
   .experience__left {
-    /* Ko muốn xuất hiện ảnh trong tablets and phones */
     display: none;
   }
 
