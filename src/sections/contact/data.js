@@ -3,8 +3,8 @@ const data = [
     id: 1,
     icon: <i className="fa-solid fa-envelope contact__platform-icon"></i>,
     title: "Email",
-    desc: "huyngoc612@gmail.com",
-    contact: "mailto:huyngoc612@gmail.com",
+    desc: "pngochuy3010@gmail.com",
+    contact: "mailto:pngochuy3010@gmail.com",
     message: "Send me!",
   },
   {

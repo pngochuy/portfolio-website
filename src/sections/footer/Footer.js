@@ -7,7 +7,7 @@ function Footer() {
       <div className="container footer__container">
         <div className="footer__main">
           <div className="footer__socials">
-            <h3 className="footer__socials-title">Useful links</h3>
+            <h2 className="footer__socials-title">Follow Me</h2>
             <div className="footer__socials-items">
               {socialsData.map((item, index) => (
                 <a
@@ -22,7 +22,7 @@ function Footer() {
             </div>
           </div>
           <ul className="footers__permalinks">
-            <h3 className="footers__permalinks-title">Follow Me</h3>
+            <h2 className="footers__permalinks-title">Useful links</h2>
             <div className="footers__permalinks-items">
               {permalinksData.map((item, index) => (
                 <li key={item.id}>
@@ -35,7 +35,8 @@ function Footer() {
 
         <div className="footer__copyright">
           <small>
-            Copyright {new Date().getFullYear()} &copy;. All rights reserved.
+            Copyright {new Date().getFullYear()} &copy;. All rights reserved and
+            made by <b>HuyPNDev</b>.
           </small>
         </div>
       </div>

@@ -21,7 +21,7 @@
 }
 
 .contact__platform {
-  background-color: rgb(137, 137, 171);
+  background-color: #454561;
   padding: 1.2rem;
   border-radius: 1.2rem;
   text-align: center;
@@ -34,9 +34,9 @@
   gap: 0.2rem;
 }
 
-.contact__platform:hover {
-  background: transparent;
-  border: 1px solid var(--color-primary);
+.contact__platform > h4,
+h5 {
+  color: #ced4da;
 }
 
 .contact__platform-icon {
@@ -50,7 +50,7 @@
   display: inline-block;
   font-size: 0.7rem;
   /* background: #ffa69e; */
-  background-color: rgb(160, 182, 238);
+  background-color: var(--color-primary);
 }
 
 /* ------------------------------------------------ */
@@ -81,7 +81,7 @@ textarea:valid {
   border: 3px solid var(--color-primary);
 }
 .button {
-  background-color: rgb(160, 182, 238);
+  background-color: var(--color-primary);
   width: fit-content;
   display: flex; /* Because if the btn has text and icon, so we need flex */
   align-items: center;
@@ -98,7 +98,7 @@ textarea:valid {
   line-height: 1;
   font-size: 0.9rem;
   font-weight: 500;
-  background-color: rgb(160, 182, 238);
+  background-color: var(--color-primary);
   padding: 0.5rem 1.3em;
   transition: var(--transition);
   position: relative;
@@ -183,6 +183,7 @@ textarea:valid {
 .input-data input:valid ~ .underline::before {
   transform: scaleX(1);
 }
+
 /* MEDIA QUERIES (tablets) */
 @media screen and (max-width: 1024px) {
   .contact__container {

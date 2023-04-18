@@ -11,11 +11,11 @@ function Header() {
           <h2>About Me</h2>
           <p className="header__profile-desc">
             Hi, I'm <span className="highlight">Pham Ngoc Huy</span>. Nice to
-            meet you today. I'm currently studying as fresher at FPT University,
-            Da Nang, Viet Nam. My interest in web development when I was high
-            school. Well-organised person, problem solver with high attention to
-            detail. If you are interested in my projects, please don't hesitate
-            to contact me directly.
+            meet you today. I'm currently studying as second-year student at FPT
+            University, Da Nang, Viet Nam. My interest in web development when I
+            was high school. Well-organised person, problem solver with high
+            attention to detail. If you are interested in my projects, please
+            don't hesitate to contact me directly.
           </p>
           <div className="header__cta">
             <a href="#contact" className="btn primary">

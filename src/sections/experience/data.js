@@ -9,7 +9,7 @@ const data = [
     id: 2,
     icon: <i class="fa-solid fa-book-open-reader"></i>,
     title: "Projects",
-    desc: "2+ Years Completed",
+    desc: "1+ Years Completed",
   },
 ];
 

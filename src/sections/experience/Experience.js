@@ -28,7 +28,7 @@ function Experience() {
             ))}
           </div>
           <p>
-            Since beginning my journey as a frontend developer nearly 2 years
+            Since beginning my journey as a frontend developer nearly 1 years
             ago, I’ve done successful responsive websites that are fast, easy to
             use, and built with best practices. The main area of my expertise is
             front-end development <span className="highlight-text">HTML</span>,{" "}

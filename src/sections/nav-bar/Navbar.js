@@ -35,7 +35,7 @@ function Navbar() {
           })}
         </ul>
 
-        {/* for responsive nav-bar */}
+        {/* for responsive nav-bar when clicked */}
         <a
           href="index.html"
           className={`nav__logo-sm ${isOpen ? "not-active" : "active"}`}

@@ -1,8 +1,11 @@
 nav {
   width: 100vw;
+  /* 5*16 = 80px */
   height: 5rem;
   display: grid;
   place-items: center;
+  /* display: flex;
+  align-items: center; */
   background: #454561;
   border-radius: 0 0 30px 30px;
   position: fixed;
@@ -25,6 +28,7 @@ nav {
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
+  /* cho thẳng hàng theo chiều ngang */
   display: flex;
   align-items: center;
   transition: var(--transition);
@@ -54,6 +58,7 @@ nav {
 .not-active {
   display: none;
 }
+
 @media screen and (max-width: 1024px) {
   .nav__menu,
   .nav__logo {
