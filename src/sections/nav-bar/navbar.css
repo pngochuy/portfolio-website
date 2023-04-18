@@ -4,8 +4,6 @@ nav {
   height: 5rem;
   display: grid;
   place-items: center;
-  /* display: flex;
-  align-items: center; */
   background: #454561;
   border-radius: 0 0 30px 30px;
   position: fixed;
@@ -28,7 +26,6 @@ nav {
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
-  /* cho thẳng hàng theo chiều ngang */
   display: flex;
   align-items: center;
   transition: var(--transition);
