@@ -343,16 +343,16 @@ img {
 }
 /* coi lại DEMO btn trong Header.js */
 .btn.primary {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn.primary:hover {
   background: var(--color-primary);
   /* text color always white that's why i didn't use a variable color */
   color: white;
   transition: var(--transition);
-}
-
-.btn.primary:hover {
-  background: transparent;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
 }
 
 .btn.sm {

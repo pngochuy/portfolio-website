@@ -29,7 +29,7 @@ const socialsData = [
   },
   {
     id: 2,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/in/pham-ngoc-huy-029779220/",
     icon: <i class="fa-brands fa-linkedin"></i>,
   },
   {
@@ -39,12 +39,12 @@ const socialsData = [
   },
   {
     id: 4,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/ngochuy.pham.787280/",
     icon: <i class="fa-brands fa-facebook"></i>,
   },
   {
     id: 5,
-    link: "https://github.com/",
+    link: "https://github.com/pngochuy",
     icon: <i class="fa-brands fa-github"></i>,
   },
 ];

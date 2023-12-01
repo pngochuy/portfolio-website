@@ -51,14 +51,16 @@ function Project() {
                 >
                   Github
                 </a>
-                <a
-                  href={item.liveDemo}
-                  className="btn primary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Demo
-                </a>
+                {item.id !== 7 && (
+                  <a
+                    href={item.liveDemo}
+                    className="btn primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a>
+                )}
               </div>
             </SwiperSlide>
           ))}

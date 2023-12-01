@@ -4,6 +4,8 @@ import project3 from "../../assests/project-3.PNG";
 import project4 from "../../assests/project-4.PNG";
 import project5 from "../../assests/project-5.PNG";
 import project6 from "../../assests/project-6.PNG";
+import project7 from "../../assests/project-7.PNG";
+import project8 from "../../assests/project-8.PNG";
 
 const data = [
   {
@@ -47,6 +49,20 @@ const data = [
     title: "Personal Note",
     liveDemo: "https://personal-note-sepia.vercel.app/",
     srcCode: "https://github.com/pngochuy/personal-note",
+  },
+  {
+    id: 7,
+    img: project7,
+    title: "Manga Universe",
+    liveDemo: "#",
+    srcCode: "https://github.com/pngochuy/manga-universe",
+  },
+  {
+    id: 8,
+    img: project8,
+    title: "Cellphone Store",
+    liveDemo: "#",
+    srcCode: "https://github.com/pngochuy/cellphone-store",
   },
 ];
 
