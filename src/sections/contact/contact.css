@@ -1,9 +1,6 @@
 .contact__container {
   width: 60%;
   display: grid;
-  /* nếu ko muốn chia để theo đơn vị "fr" thì dùng % để thay thế,
-    nếu muốn dùng gap theo % thì (width tổng - width đã chia đôi tùy ý là ra)
-  */
   grid-template-columns: 30% 58%;
   gap: 12%;
 }
